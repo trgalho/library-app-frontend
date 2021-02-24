@@ -17,8 +17,8 @@ const BookViewComponent = {
     controller: [ "$scope", "$location", BookViewController ]
 };
 
-import { addStylesheet } from "../../helpers/StyleSheetHelper.js"
+import { StyleSheetHelper } from "/helpers/index.js"
 
-addStylesheet( BookViewComponent.css );
+StyleSheetHelper.addStylesheet( BookViewComponent.css );
 
 angular.module("libraryApp").component( "bookView", BookViewComponent );

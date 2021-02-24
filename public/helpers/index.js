@@ -1,4 +1,4 @@
-export * as StyleSheetHelper from "./StyleSheetHelper";
+export * as StyleSheetHelper from "./StyleSheetHelper.js";
 
 import * as env from '../libs/.env.json';
 

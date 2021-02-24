@@ -1,4 +1,4 @@
-import { api, addStylesheet } from '../../helpers';
+import { api, StyleSheetHelper } from '../../helpers/index.js';
 
 const baseUrl = './pages/book-list-page/book-list';
 
@@ -25,7 +25,7 @@ export const BookListPage = {
     controller: [ "$scope", "$http", BookListController ]
 };
 
-addStylesheet( BookListPage.css );
+StyleSheetHelper.addStylesheet( BookListPage.css );
 
 angular.module("libraryApp").controller( "BookListController", BookListController );
 
