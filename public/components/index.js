@@ -1,0 +1,1 @@
+import "./book-view-component/book-view.js";

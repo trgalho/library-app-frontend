@@ -1,0 +1,16 @@
+body {
+    background: linear-gradient( #0FA4A4, #4FE4E4);
+    margin: 0;
+}
+
+.topbar {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+.welcome-message {
+    text-align: center;
+}

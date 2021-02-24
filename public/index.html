@@ -1,0 +1,18 @@
+<html ng-app="libraryApp">
+    <head>
+        <title> Dinkle Library </title>
+        <link rel="stylesheet" type="text/css" href="./index.css"></link>
+        <script src="libs/angular/angular.js"></script>
+        <script src="libs/angular/angular-route.js"></script>
+        <script src="app.js"></script>
+        <script type="module" src="components/index.js"></script>
+        <script type="module" src="pages/index.js"></script>
+    </head>
+    <body>
+        <div class="topbar">
+          <h1 class="welcome-message"> Dinkle Library </h1>
+        </div>
+        
+        <ng-view></ng-view>
+    </body>
+</html>
