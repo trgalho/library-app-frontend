@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "gulp",
-    "serve": "http-server",
+    "serve": "http-server -p ${FRONTEND_PORT}",
     "start": "yarn prepare && yarn serve"
   },
   "dependencies": {
