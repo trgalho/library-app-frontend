@@ -1,0 +1,7 @@
+{
+  "name": "library-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Talisson Galho <trgalho@gmail.com>",
+  "license": "MIT"
+}
