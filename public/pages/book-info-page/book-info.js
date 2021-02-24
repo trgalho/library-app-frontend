@@ -1,3 +1,5 @@
+import { api, addStylesheet } from '../../helpers';
+
 const baseUrl = './pages/book-info-page/book-info';
 
 function BookInfoController( $scope, $routeParams, $http) {
@@ -27,7 +29,7 @@ export const BookInfoPage = {
     }
 };
 
-import { addStylesheet } from "../../helpers/StyleSheetHelper.js"
+
 
 addStylesheet( BookInfoPage.css );
 

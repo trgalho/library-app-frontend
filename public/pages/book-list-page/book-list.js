@@ -1,3 +1,5 @@
+import { api, addStylesheet } from '../../helpers';
+
 const baseUrl = './pages/book-list-page/book-list';
 
 function BookListController($scope, $http) {
@@ -22,8 +24,6 @@ export const BookListPage = {
     templateUrl: `${baseUrl}.html`,
     controller: [ "$scope", "$http", BookListController ]
 };
-
-import { addStylesheet } from "../../helpers/StyleSheetHelper.js"
 
 addStylesheet( BookListPage.css );
 
