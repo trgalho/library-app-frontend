@@ -1,6 +1,6 @@
 export * as StyleSheetHelper from "./StyleSheetHelper.js";
 
-import * as env from '../libs/.env.json';
+import env from '../libs/.env.js';
 
 export const api = {
     url: `http://localhost:${env.BACKEND_PORT}/${env.BASE_API_SCHEMA}`,

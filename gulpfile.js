@@ -17,21 +17,21 @@ function copyLibraries(){
 const { env } = process;
 
 function getEnvironmentJsonContent(){
-    const BACKEND_PORT    = Number( env.BACKEND_PORT ) || 8001;
-    const BASE_API_SCHEMA = Number( env.BASE_API_SCHEMA ) || "/api/v1/";
+    const BACKEND_PORT    = Number( env.BACKEND_PORT ) || 8000;
+    const BASE_API_SCHEMA = Number( env.BASE_API_SCHEMA ) || "api/v1/";
     
     const json_content = JSON.stringify({ BACKEND_PORT, BASE_API_SCHEMA });
 
     return json_content;
 }
 
-function generateEnvironmentJson(){
+function generateEnvironmentJs(){
 
-    const json_stream = vinly_source_stream( ".env.json");
+    const json_stream = vinly_source_stream( ".env.js");
 
     const json_content = getEnvironmentJsonContent();
 
-    json_stream.write( json_content );
+    json_stream.write( `export default ${json_content}` );
 
     json_stream.end();
 
@@ -40,5 +40,5 @@ function generateEnvironmentJson(){
     );
 }
 
-gulp.task(generateEnvironmentJson.name, generateEnvironmentJson );
-gulp.task('default', gulp.parallel( copyLibraries, generateEnvironmentJson ) );
+gulp.task(generateEnvironmentJs.name, generateEnvironmentJs );
+gulp.task('default', gulp.parallel( copyLibraries, generateEnvironmentJs ) );
