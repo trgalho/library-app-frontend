@@ -26,8 +26,50 @@ body {
     display: flex;
     justify-content: center;
     background: white;
+    padding: 0.5rem 0;
+    filter: var(--drop-shadow);
+    position: sticky;
+    top: 0;
+}
+.topbar > [title] {
+    display: flex;
+    justify-content: space-between;
 }
 
-.welcome-message {
-    text-align: center;
+.topbar > [title] > img {
+    display: inline-flex;
+    height: 2.1em;
+    margin-left: 0.15em;
+}
+
+.topbar > [title] > .welcome-message {
+    font-size: 2rem;
+    font-family: primary-font;
+    text-decoration: underline;
+    margin-right: 0.15em;
+}
+.main-container {
+    display: flex;
+    padding: 0.5rem;
+}
+
+[flex]{
+    display: flex;
+}
+[inline-flex]{
+    display: inline-flex;
+}
+
+[grow]{
+    flex-grow: 1;
+}
+[space-evenly]{
+    justify-content: space-evenly;
+}
+[card]{
+    border-radius: 5px;
+    filter: var(--light-drop-shadow);
+}
+[justify-text]{
+    text-align: justify;
 }
