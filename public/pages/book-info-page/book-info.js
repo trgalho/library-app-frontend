@@ -10,6 +10,11 @@ function BookInfoController( $scope, $routeParams, $http) {
       $http.get(`${api.book}/${isbn}`).then( (book)=>{
         console.log( book, book.data );
         $scope.book = book.data;        
+        $scope.hasError = false;
+      })
+      .catch( error =>{
+        console.error('Erro ao carregar as informações do livro da API', error );
+        $scope.hasError = true;
       });    
     }
   

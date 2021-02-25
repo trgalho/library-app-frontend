@@ -1,0 +1,24 @@
+[book-info-container] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+[book-info-container] > h1,
+[book-info-container] > h2 {
+    justify-content: center;
+    margin: 0;
+}
+
+[book-info-container] > h3,
+[book-info-container]  h4 {
+    justify-content: center;
+    margin: 0.25em;
+}
+
+[book-info-container] > [book-info-details] {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.9);
+    margin-top: 1em;
+}

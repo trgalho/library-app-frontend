@@ -1,3 +1,20 @@
-<div>
-    <h1> {{ book.title }} </h1>
+<div ng-if="book" book-info-container>
+    <h1 flex title="Book title"> {{ book.title }} </h1>
+    <h2 flex title="Book subtitle"> {{ book.subtitle }} </h2>
+
+    <h3 flex title="Book author"> {{ book.author }} </h3>
+
+    <div flex space-evenly>
+        <h4 inline-flex > <b>ISBN:&nbsp;  </b> {{ book.isbn }} </h4>
+        <h4 inline-flex > <b>Price:&nbsp; </b> R$ {{ book.price.toFixed(2) }} </h4>
+    </div>
+
+    <div book-info-details>
+        <h4> Description </h4>
+        <p justify-text>
+            {{ book.description }}
+        </p>    
+    </div>
+    
 </div>
+<api-access-error ng-if="hasError"/>
