@@ -3,7 +3,7 @@ const vinly_source_stream = require('vinyl-source-stream');
 
 const BASE_OUTPUT_DIR = "./public/libs";
 
-function copyLibraries(){
+function copyAngularJs(){
     return gulp.src([
         'node_modules/angular/angular.min.js',
         'node_modules/angular/angular.js',
@@ -40,5 +40,12 @@ function generateEnvironmentJs(){
     );
 }
 
+function copyCss(){
+    return gulp.src("./node_modules/normalize.css/normalize.css")
+    .pipe(
+        gulp.dest(`${BASE_OUTPUT_DIR}/css`)
+    )
+}
+
 gulp.task(generateEnvironmentJs.name, generateEnvironmentJs );
-gulp.task('default', gulp.parallel( copyLibraries, generateEnvironmentJs ) );
+gulp.task('default', gulp.parallel( copyAngularJs, generateEnvironmentJs, copyCss ) );
