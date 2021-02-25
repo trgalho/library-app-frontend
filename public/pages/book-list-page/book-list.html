@@ -1,5 +1,8 @@
-<div>
+<div class="book-list-container" flex grow>
+  <div ng-if="!hasError">
     <div ng-repeat="item in itens">
       <book-view book=item></book-view>
     </div>
+  </div>
+  <api-access-error ng-if="hasError"/>
 </div>

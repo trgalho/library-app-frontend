@@ -8,7 +8,12 @@ function BookListController($scope, $http) {
     function reloadBooks(){
       $http.get(api.book).then( (books)=>{
         console.log( books, books.data );
-        $scope.itens = books.data;        
+        $scope.itens = books.data;
+        $scope.hasError = false;      
+      })
+      .catch( error =>{
+        console.error("Erro a requisitar lista de livros da api", error);
+        $scope.hasError = true;
       });    
     }
   
